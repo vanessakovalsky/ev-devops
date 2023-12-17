@@ -265,3 +265,9 @@ aws_security_group.instance_sg: Destruction complete after 2s
 
 Destroy complete! Resources: 2 destroyed.
 ```
+
+## Pour aller plus loin :
+
+* [Gérer des variables d'entrée / sortie](https://github.com/vanessakovalsky/terraform-training/blob/main/aws/exercice-2-variables.md)
+* [Récupérer l'identifiant de l'image avec une data source](https://github.com/vanessakovalsky/terraform-training/blob/main/aws/exercice-3-datasource.md)
+* [Rendre notre code réutilisable avec des modules](https://github.com/vanessakovalsky/terraform-training/blob/main/aws/exercice-4-module.md)
