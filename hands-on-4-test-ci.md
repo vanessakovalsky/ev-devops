@@ -1,4 +1,4 @@
-# exécution de test unitaire et d'analyse qualité sur les chaines de CI
+# Exécution de test unitaire et d'analyse qualité sur les chaines de CI
 
 ## Lancement des tests unitaires
 * Des tests existent dans l'application
