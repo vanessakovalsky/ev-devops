@@ -61,3 +61,9 @@ mvn test
 * * * Patter : build/reports/unitreport.xml
 
 --> Votre chaine est maintenant configuré avec l'analyse qualité et la publication des rapports associés côté Jenkins, félicitations :)
+
+
+## Pour aller plus loin :
+
+* Déployer un environnement avec terraform depuis jenkins (pour déployer un environnement de test par exemple) : https://spacelift.io/blog/terraform-jenkins
+* Ajouter des tests de charge avec JMeter sur Jenkins : https://www.jenkins.io/doc/book/using/using-jmeter-with-jenkins/ 
