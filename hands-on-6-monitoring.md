@@ -45,33 +45,32 @@ sum(rate(container_cpu_usage_seconds_total{instance=~".*",name=~".*",name=~".+"}
 ```
 - Pour coller la requête, il faut passer en mode code :
 ![](https://github.com/vanessakovalsky/grafana-training/blob/main/img/exo2/requete_graph.png)
-https://github.com/vanessakovalsky/grafana-training/blob/main/img/exo2/dashboard1.png?raw=true
 
 - Sur la droite, nous avons les options du panel, celle-ci sont différentes en fonction du type de graphique, laissons ici Time series pour ce premier graphique
 - Nous allons choisir un nom pour notre graphique `CPU par conteneur`
 
-![](https://github.com/vanessakovalsky/grafana-training/img/exo2/time_serie_option.png)
+![](https://github.com/vanessakovalsky/grafana-training/blob/main/img/exo2/time_serie_option.png)
 
 - Nous pouvons également définir de nombreuses options comme les valeurs à afficher dans la légende, la taille et la forme de la courbe, des labels pour les axes, ainsi que des valeurs minimales et maximales, etc. 
 - Une fois les options choisies, nous pouvons enregistrer le graphique à l'aide du bouton bleu `Apply` présent en haut à droite de la page. 
 
 - Nous arrivons alors sur notre dashboard
 
-![](img/exo2/dashboard1.png)
+![](https://github.com/vanessakovalsky/grafana-training/blob/main/img/exo2/dashboard1.png)
 
 - En cliquant sur le titre de notre graphique on peut alors le faire glisser dans la ligne que nous avons créé à l'étape précédente.
 
-![](img/exo2/dashboard2.png)
+![](https://github.com/vanessakovalsky/grafana-training/blob/main/img/exo2/dashboard2.png)
 
 - N'oubliez pas d'enregistrer votre Dashboard en cliquant sur la petite disquette en haut à droite.
 
 - Répeter l'ajout de panel pour les trois autres requêtes de l'exercice 1 (mémoire, réseaux entrant, réseau sortant)
 
-![](img/exo2/dashboard3.png)
+![](https://github.com/vanessakovalsky/grafana-training/blob/main/img/exo2/dashboard3.png)
 
 - En jouant avec le positionnement et la taille des graphiques vous pouvez réarranger votre dashboard
 
-![](img/exo2/dashboard4.png)
+![](https://github.com/vanessakovalsky/grafana-training/blob/main/img/exo2/dashboard4.png)
 
 ## Ajouter des graphiques pour surveiller la VM
 
@@ -100,7 +99,7 @@ count(rate(container_last_seen{job="cadvisor", name!=""}[5m]))
 - `Thresold` permet de définir des couleurs en fonction de la valeur. Cette valeur est exprimée en mode absolue ou en pourcentage
 - N'oubliez pas de cliquer sur Apply en haut à droite lorsque vous avez terminer. 
 
-![](img/exo2/dashboard5.png)
+![](https://github.com/vanessakovalsky/grafana-training/blob/main/img/exo2/dashboard5.png)
 
 ### Trafic entrant et sortant sur la VM
 
@@ -131,7 +130,7 @@ sum(rate(container_network_receive_bytes_total{id="/"}[5m])) by (host)
 - Dans `Fields with name` mettre la valeur `RECEIVE` (qui correspond à la légende de la première requête), puis choisir une couleur
 - Répéter l'opération pour la deuxième requête avec le nom de la deuxième légende et choisir une autre couleur.
 
-![](img/exo2/dashboard6.png)
+![](https://github.com/vanessakovalsky/grafana-training/blob/main/img/exo2/dashboard6.png)
 
 
 ### Jauges
@@ -160,7 +159,7 @@ sum(rate(container_network_receive_bytes_total{id="/"}[5m])) by (host)
   - Mode : Absolute
 - N'oubliez pas d'appliquer les modifications avec le bouton `Apply`
 
-![](img/exo2/dashboard7.png)
+![](https://github.com/vanessakovalsky/grafana-training/blob/main/img/exo2/dashboard7.png)
 
 - Répeter l'opération pour le système de fichier avec la requête : 
 ```
@@ -175,6 +174,6 @@ sum(sum by (container_name)( rate(container_cpu_usage_seconds_total[1m] ) )) / c
 
 - Mettre les trois graphiques côte à côté pour obtenir un résultat semblable à celui-ci :
 
-![](img/exo2/dashboard8.png)
+![](https://github.com/vanessakovalsky/grafana-training/blob/main/img/exo2/dashboard8.png)
 
 
