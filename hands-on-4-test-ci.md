@@ -43,23 +43,16 @@ mvn test
 
 
 ## Afficher les résultats sous formes de rapports
-* Pour afficher des rapports nous allons avoir besoin de différents plugins de Jenkins, qui permettent à partir des logs générés au format XML de créer des rapports graphiques :
-* * Warnings Next Generation : récupère de nombreux logs et affiche au format graphique (CPD, MD, CS)
-* * xUnit : récupère les logs des tests et affiche un rapport
-* Pour installer les plugins, rendez vous dans Manage Jenkins > Plugin Manager 
-* Chercher et cocher ces 2 plugins 
-* Cliquer sur Install without restart
-* Il reste maintenant à ajouter les étapes de builds our la publication des rapports
-* Retourner dans la configuration du Job
-* Dans l'onglet Post Build, ajouter une action
-* * Record Compiler warning and static analysis results
-* * * Static Analysis
-* * * * Tools : PHP Code sniffer
-* * * * Report file pattern :build/reports/checkstyle.xml
-* * Publish xUnit test result report
-* * * Report type  : PHP Unit
-* * * Patter : build/reports/unitreport.xml
 
+* Ajouter dans l'étape de test le post traitement suivant
+```
+post {
+    always {
+      junit(testResults: 'target/surefire-reports/*.xml', allowEmptyResults : true)
+    }
+  }
+```
+* Push votre jeninsfile et lancer un build
 --> Votre chaine est maintenant configuré avec l'analyse qualité et la publication des rapports associés côté Jenkins, félicitations :)
 
 
