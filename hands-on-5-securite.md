@@ -34,7 +34,7 @@ stage ("Python Bandit Security Scan"){
 * Push votre fichier et relancer un build.
 * L'application est t'elle sécurisée ?
 
-## Pour aller plus loin - Analyse d'image de conteneur
+## Pour aller plus loin - Analyse d'image de conteneur
 
 * Vous pouvez aussi ajouter une analyse sur l'image de conteneur avec Anchor : https://www.jenkins.io/blog/2018/06/20/anchore-image-scanning/
 * Ou bien avec sysdig : https://sysdig.com/blog/docker-scanning-jenkins/
