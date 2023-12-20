@@ -57,7 +57,7 @@ post {
 ```
            post {
                     always {
-                        recordIssues enabledForFailure: true, tool: checkStyle()
+                        recordIssues enabledForFailure: true, tools: checkStyle()
                     }
         }
 ```
