@@ -44,7 +44,7 @@ sum(rate(container_cpu_usage_seconds_total{instance=~".*",name=~".*",name=~".+"}
 
 ```
 - Pour coller la requête, il faut passer en mode code :
-![](https://github.com/vanessakovalsky/grafana-training/img/exo2/requete_graph.png)
+![](https://github.com/vanessakovalsky/grafana-training/tree/main/img/exo2/requete_graph.png)
 
 - Sur la droite, nous avons les options du panel, celle-ci sont différentes en fonction du type de graphique, laissons ici Time series pour ce premier graphique
 - Nous allons choisir un nom pour notre graphique `CPU par conteneur`
