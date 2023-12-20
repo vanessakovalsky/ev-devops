@@ -52,7 +52,17 @@ post {
     }
   }
 ```
-* Push votre jeninsfile et lancer un build
+* Push votre jeninsfile et lancer un build, vous avez alors un rapport sur l'execution de votre test
+* Vous pouvez aussi générer un rapport pour l'analyse qualité de checkstyle, ajouter sur l'etape d'analyse le code suivant dans le Jenkinsfile:
+```
+           post {
+                    always {
+                        recordIssues enabledForFailure: true, tool: checkStyle()
+                    }
+        }
+```
+* Push votre jeninsfile et lancer un build, vous avez alors un rapport sur la qualité de votre code
+
 --> Votre chaine est maintenant configuré avec l'analyse qualité et la publication des rapports associés côté Jenkins, félicitations :)
 
 
